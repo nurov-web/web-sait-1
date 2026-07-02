@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AUTO-PRO | Таҷҳизоти касбии автомобилӣ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .industrial-grid {
+            background-image: radial-gradient(#c4c7c7 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "outline": "#747878",
+                      "secondary-container": "#e51a38",
+                      "surface-bright": "#f9f9f9",
+                      "surface-variant": "#e2e2e2",
+                      "surface": "#f9f9f9",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed-variant": "#464747",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface": "#1a1c1c",
+                      "primary": "#000000",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f9f9f9",
+                      "outline-variant": "#c4c7c7",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#410007",
+                      "inverse-primary": "#c8c6c5",
+                      "on-primary-container": "#858383",
+                      "on-surface-variant": "#444748",
+                      "surface-tint": "#5f5e5e",
+                      "on-secondary-container": "#fffbff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-tertiary-container": "#838484",
+                      "primary-container": "#1c1b1b",
+                      "surface-container-low": "#f3f3f3",
+                      "inverse-surface": "#2f3131",
+                      "surface-container": "#eeeeee",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#e3e2e2",
+                      "tertiary": "#000000",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-primary-fixed-variant": "#474746",
+                      "inverse-on-surface": "#f1f1f1",
+                      "secondary-fixed-dim": "#ffb3b1",
+                      "surface-container-highest": "#e2e2e2",
+                      "tertiary-container": "#1a1c1c",
+                      "secondary-fixed": "#ffdad8",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed-variant": "#92001d",
+                      "secondary": "#bb0027",
+                      "on-background": "#1a1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "unit": "4px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter-desktop": "24px",
+                      "gutter-mobile": "16px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md industrial-grid">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-container-high border-b border-outline-variant dark:border-outline shadow-sm flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-variant transition-colors active:scale-95 transition-transform" data-icon="menu">menu</button>
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-on-primary-fixed tracking-tighter">AUTO-PRO</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold font-label-md" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="#catalog">Catalog</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="#about">About</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-variant transition-colors active:scale-95 transition-transform" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-variant transition-colors active:scale-95 transition-transform" data-action="open-cart" id="open-cart" data-icon="shopping_cart">shopping_cart</button>
+</div>
+</header>
+<main class="pt-16 pb-20 md:pb-0">
+<!-- Hero Slider Section -->
+<section id="home" class="relative h-[70vh] md:h-[80vh] overflow-hidden group">
+<div class="relative w-full h-full" id="hero-slider">
+<!-- Slide 1 -->
+<div class="absolute inset-0 transition-opacity duration-1000 opacity-100">
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-performance turbocharged car engine shown in a dark, professional workshop environment. Sharp metallic details and high-contrast lighting emphasizing engineering precision. The color palette is dominated by deep blacks, charcoal grays, and chrome highlights with a clean industrial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9NvEhvp4kiHY5hHtdmVft_fZt_1Judfl-sUu2UVno098QxbbSIGbLUwkVv281id4Jo_Yi423edl92ykJkzeS_COqbTSEIOf2IWfCnXWfMe3in2ZsmpSi2hfhAAZF0SXEkkOdA877EgpYKb11AEhPfPMqxgksRTBxqxLgUZcliRerwPelyFo-eXluZjPd0-E-u5WjF97yh_R3Rgbg_TWwNe1qPm5GiWNNJ_dclpVGWF-jGXnZs3n6QWw')"></div>
+<div class="absolute inset-0 z-20 flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-white">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-4 text-white">ҚИСМҲОИ БАЛАНД-СИФАТ<br/><span class="text-secondary">БАРОИ АВТОМОБИЛИ ШУМО</span></h1>
+<p class="font-body-lg text-body-lg mb-8 max-w-xl text-surface-variant">Таҷҳизоти касбӣ ва қисмҳои эҳтиётии аслӣ аз брендҳои пешрафтаи ҷаҳон.</p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-3 font-label-md uppercase tracking-wider hover:bg-secondary-container transition-all active:scale-95">ҲОЛО ХАРИДАН</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 font-label-md uppercase tracking-wider hover:bg-white/20 transition-all">КАТАЛОГ</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Slider Controls -->
+<button class="absolute left-4 top-1/2 -translate-y-1/2 z-30 material-symbols-outlined text-white p-2 bg-black/30 hover:bg-black/50 transition-colors" data-icon="chevron_left">chevron_left</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 z-30 material-symbols-outlined text-white p-2 bg-black/30 hover:bg-black/50 transition-colors" data-icon="chevron_right">chevron_right</button>
+</section>
+<!-- Featured Categories (Bento Grid) -->
+<section id="catalog" class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12 flex items-end justify-between border-l-4 border-secondary pl-4">
+<div>
+<span class="text-secondary font-label-md uppercase tracking-widest block mb-2">ИНТИХОБ КУНЕД</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">КАТЕГОРИЯҲОИ АСОСӢ</h2>
+</div>
+<a class="text-primary font-label-md border-b-2 border-primary hover:text-secondary hover:border-secondary transition-colors" href="#">ҲАМАИ КАТЕГОРИЯҲО</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-mobile md:gap-gutter-desktop h-[600px]">
+<!-- Big Card: Engines -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A clean, industrial display of a powerful V8 internal combustion engine. The lighting is focused and dramatic, highlighting the silver and black metallic textures. Set against a dark, minimalist charcoal background to emphasize high-end automotive engineering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfPjZq3OO1ZEYpA6QVyN4r08H28t1pPELZvjM0Nt4oJ_7lonFVCDI86KtpIaLqp7O9Ed_GUYjylEXGl7MBZhlQTlqMni6HgEk5ZXzP-M-KY-obj7a-dCn2UfeMAxgep3iTDCFO904La7M0yh1q6EgvDW9_uYuWVECEuUVVBxbNyW0lqruAw-Rj6frZadZO9VCpZ5naYQm9wzl64CmqIVjdn6wG0ILs39BxM7zXYEkMLEHqQkbIL2HZUA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-white font-headline-md text-headline-md mb-2">МУҲАРРИКҲО</h3>
+<p class="text-surface-variant font-body-md mb-4">Қисмҳои муҳаррик ва блокҳои пурра</p>
+<span class="material-symbols-outlined text-white group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<a class="absolute inset-0 z-10" href="#"></a>
+</div>
+<!-- Card: Tires -->
+<div class="relative group overflow-hidden bg-surface-container shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A high-performance racing tire with aggressive tread patterns, displayed in a low-angle shot under cool-toned industrial spotlights. The background is a clean grey concrete texture, emphasizing the rugged durability and professional quality of the product." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBj6HzNZSBoFZwCJS8iRaBPdSBO4_FpJHuSVO-X2o7QViEbELdsKdgDbqRtdy1hWerUDkg-m7mTlwHcHbNxzecpQeAdI5_QSbH5iqYit5zS5mmlbBpwnRndJCOB1mLTqufQe5Dd2DcJQnR_-er2Ere7NH0AwEMFpsg3i1YmzaZ1LgZWiMJbnIR6W0FMWSzQ2ftZUDUS_eGLFTlLFEb5L1GE571OsF5bnERvsMamXnY6ZSOfEoJs2-3Pcg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-white font-label-md text-label-md uppercase">ЧАРХҲО</h3>
+</div>
+<a class="absolute inset-0 z-10" href="#"></a>
+</div>
+<!-- Card: Tools -->
+<div class="relative group overflow-hidden bg-surface-container shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A collection of professional grade chrome vanadium wrenches and mechanical tools neatly organized on a dark magnetic tool holder. The lighting is sharp and technical, showcasing the polished surfaces of the industrial tools in a modern workshop setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASTcrt7Gm2ernFy-VCWVFukh3eW_wjnr36nfMEYQC0kH0GSIPhgh5j9HffR1sBz0C_uwBq4bB1akChTpBByOg2OCNSdgbgARa9KVhW1KFcQ1-K_7o8OReWtY1OFpNK4EB6gYWNxq3cKeaUa6XZL6JIiws6SUYR_7pFyf-D9trHGO6EsMDV1Vq-f5Vg4ja_rkgL7PEINIouBYsAo5w33o-JlVm7_P0J6wupnv0fqtdjNiQ1S5C_2tEyAQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-white font-label-md text-label-md uppercase">АСБОБҲО</h3>
+</div>
+<a class="absolute inset-0 z-10" href="#"></a>
+</div>
+<!-- Card: Lighting (Wide Mobile / Single Desktop) -->
+<div class="md:col-span-2 relative group overflow-hidden bg-surface-container shadow-sm">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern automotive LED headlight assembly glowing with a sharp white-blue light in a dark environment. The design is sleek and futuristic, featuring intricate lens details and black housing, photographed with a high-end commercial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEwQP8XMo3a-C56_W9Ev4d0WKT3LJw9Gurd0h9mkhLCn-5C9Sh0FXeFAt0CdTZf4Ms2e2MAbj9NJ9k3SzcCoHPADjeDYgb1_-iE1ENOfOvvoUp7R9whj8lZJp03lRRTn9uidYWNQND_OxLVKqt7iuavMIzWo96nGKU15GIg1tbOoBTTybOBA7RLiAYAbWIjP10EZxSCr-QPXhcthWGTynX3o3XI3nADfOLUScGo8wRBREEXh6HVSMdKQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-white font-label-md text-label-md uppercase">РАВШАНИДИҲӢ</h3>
+</div>
+<a class="absolute inset-0 z-10" href="#"></a>
+</div>
+</div>
+</section>
+<!-- Best Sellers Scroll -->
+<section class="bg-surface-container-low py-20 overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-10 flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-primary">МАҲСУЛОТИ ПУРФУРӮШ</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-colors" id="scroll-left">
+<span class="material-symbols-outlined" data-icon="west">west</span>
+</button>
+<button class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-colors" id="scroll-right">
+<span class="material-symbols-outlined" data-icon="east">east</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter-desktop overflow-x-auto px-margin-mobile md:px-margin-desktop hide-scrollbar pb-8 snap-x" id="best-sellers-container">
+<!-- Product 1 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-white p-4 shadow-sm group snap-start relative">
+<div class="relative bg-surface-container h-64 mb-4 flex items-center justify-center overflow-hidden">
+<img class="object-contain w-4/5 h-4/5 transition-transform duration-500 group-hover:scale-110" data-alt="A professional heavy-duty oil filter for an SUV, isolated on a clean light gray background. The product is depicted with sharp focus, highlighting the brand markings and metallic construction in a clean studio photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiBbE14M6cJMi-nwASc42JlprGt_6Iptz4smCro-LrPZMy8wwqV6KvstEGQSvCr1wlofCk2bY3r3FE8xqjYJCmcepoXPKLc7EPw8Raxavh4CESWGbpuYMZX3Sq0wlq_gyB2ZWOk0DNoYToteEu0cIEmKmPD5IJj7c_6h3QRKgEyTlNkZls6ojj2Y6LS7rQxGgykGlmsv6YknmmKz_6XUMtYAYMrb93mQNqTYu5om9c3W16dcDeOpVSrg"/>
+<div class="absolute top-2 left-2 bg-secondary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">-15%</div>
+</div>
+<div class="space-y-2">
+<p class="text-outline text-label-sm uppercase font-label-sm">МОТОР &amp; ҚИСМҲО</p>
+<h4 class="font-headline-md text-body-md line-clamp-1 group-hover:text-secondary transition-colors">Филтри равғани "Pro-Performance"</h4>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-outline text-label-sm">(48)</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-bold text-primary text-body-lg">120 TJS</span>
+<button class="bg-primary text-white p-2 hover:bg-secondary transition-colors" data-action="add-cart" data-product-name="Филтри равғани Pro-Performance" data-product-price="120">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-white p-4 shadow-sm group snap-start">
+<div class="relative bg-surface-container h-64 mb-4 flex items-center justify-center overflow-hidden">
+<img class="object-contain w-4/5 h-4/5 transition-transform duration-500 group-hover:scale-110" data-alt="A set of high-quality ceramic brake pads displayed on a light gray background. The product looks robust with clear metallic and ceramic textures, captured in professional studio lighting that emphasizes safety and performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Mc61Ra4HAhvGUGXSTOOYjiDM1OLkwocNgwaCGi_7t1ohw2TGQVx3q3VXLOoRhmAPiDNTuLj7_XZe02kDRpddne-xaXaK-68MOgQHPW-X3tUzISpYusyYC_la6IgznImw1H7rd0-5CzoR5sgZFGT1-kH9-5ux6ikAUbF82n0Mw6yJTi9KldprDuvIQCF1E_2q01d7w2OjyHJJcS2lo8kFUba4JxnEmf77IF-Xzfbssi8obVQgmXa8HQ"/>
+</div>
+<div class="space-y-2">
+<p class="text-outline text-label-sm uppercase font-label-sm">НИЗОМИ БОРМЕЗӢ</p>
+<h4 class="font-headline-md text-body-md line-clamp-1 group-hover:text-secondary transition-colors">Накладкаҳои тормозӣ Premium</h4>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-outline text-label-sm">(32)</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-bold text-primary text-body-lg">450 TJS</span>
+<button class="bg-primary text-white p-2 hover:bg-secondary transition-colors" data-action="add-cart" data-product-name="Накладкаҳои тормозӣ Premium" data-product-price="450">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-white p-4 shadow-sm group snap-start">
+<div class="relative bg-surface-container h-64 mb-4 flex items-center justify-center overflow-hidden">
+<img class="object-contain w-4/5 h-4/5 transition-transform duration-500 group-hover:scale-110" data-alt="A high-capacity car battery with clear brand labeling in black and red. Studio shot against a neutral grey background with soft shadows to highlight the industrial build and reliable quality of the product." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNILwBGsOw0URkf6sEz2Fo-tkZbfp1O7wxCdOnD34doUlC_XfHIp-JUbZjZjZXpTJhdyojNbwJ06hOwISPhepdX1b22ocPmTKvHfEyARhDtD7exmvztE0et0bcd_ZsVm3TFvC0rxwC1xFkCyO0jQQ9oOWtCTYPNfsFvQ1wWSXTHLMn8EPyRKUhiwEDjgUMYQfbhU1zEobB3-0aVapBNk71QsNOrEuoWTfQpgAiNONiPVIPSXd7koYzmw"/>
+</div>
+<div class="space-y-2">
+<p class="text-outline text-label-sm uppercase font-label-sm">ЭЛЕКТРИКА</p>
+<h4 class="font-headline-md text-body-md line-clamp-1 group-hover:text-secondary transition-colors">Аккумулятор 75Ah PowerVolt</h4>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-outline text-label-sm">(124)</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-bold text-primary text-body-lg">890 TJS</span>
+<button class="bg-primary text-white p-2 hover:bg-secondary transition-colors" data-action="add-cart" data-product-name="Аккумулятор 75Ah PowerVolt" data-product-price="890">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="min-w-[280px] md:min-w-[320px] bg-white p-4 shadow-sm group snap-start">
+<div class="relative bg-surface-container h-64 mb-4 flex items-center justify-center overflow-hidden">
+<img class="object-contain w-4/5 h-4/5 transition-transform duration-500 group-hover:scale-110" data-alt="A full synthetic motor oil container, 5 liters, featuring a modern label design with gold and black accents. Shot in a studio with clean reflections on the plastic surface, emphasizing premium lubrication technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNe8OrLewHjbtET8Urgo1TnGRHHGukvucB8lLGj1tr2FLk2JlDPWr57NpLR3YlWLU9AR7Rb7w2TtwN8iKTe184odFnb7LMRMmXtFdUSAcXDFmhWSN1OAgo8DoAVLqQSZKhBZll-UUw-rXYxxbbcuGkdGD1oUUv_zwNn4NM4_SYlBqXK8P15HeMV0n_5V9GopoUlqeuW3fOSAWme_PAAooussn8mMye7QIzJ00F02MuRPS0UAgfZH3JPg"/>
+</div>
+<div class="space-y-2">
+<p class="text-outline text-label-sm uppercase font-label-sm">РАВҒАНҲО</p>
+<h4 class="font-headline-md text-body-md line-clamp-1 group-hover:text-secondary transition-colors">Равғани синтетикӣ 5W-40 5L</h4>
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-outline text-label-sm">(95)</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<span class="font-bold text-primary text-body-lg">380 TJS</span>
+<button class="bg-primary text-white p-2 hover:bg-secondary transition-colors" data-action="add-cart" data-product-name="Равғани синтетикӣ 5W-40 5L" data-product-price="380">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section id="about" class="py-20 px-margin-mobile md:px-margin-desktop bg-primary text-white relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-secondary opacity-10 -skew-x-12 translate-x-12"></div>
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">БА ХАБАРНОМА ОБУНА ШАВЕД</h2>
+<p class="text-surface-variant font-body-lg">Аз тахфифҳои нав ва маҳсулоти тозатарин аввалин шуда бохабар бошед.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+<input id="newsletter-email" class="bg-primary-container border-outline text-white px-6 py-4 focus:border-secondary focus:ring-0 w-full md:w-80 font-body-md" placeholder="Почтаи электронии шумо" type="email"/>
+<button id="newsletter-submit" class="bg-secondary text-on-secondary px-10 py-4 font-label-md uppercase tracking-wider hover:bg-secondary-container transition-all active:translate-y-1">ОБУНА</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline shadow-lg flex justify-around items-center h-20 px-2 pb-2">
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-label-sm text-label-sm">Catalog</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors active:translate-y-0.5 transition-all relative" data-action="open-cart" id="mobile-open-cart">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-sm text-label-sm">Cart</span>
+<span id="cart-count" class="absolute top-0 right-1 w-4 h-4 bg-secondary text-white text-[10px] rounded-full flex items-center justify-center">0</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+<!-- Promotional Pop-up Modal -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-margin-mobile opacity-0 pointer-events-none transition-opacity duration-500" id="promo-modal">
+<div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="modal-overlay"></div>
+<div class="relative bg-white max-w-lg w-full overflow-hidden shadow-2xl flex flex-col md:flex-row transform scale-95 transition-transform duration-500" id="modal-content">
+<div class="w-full md:w-1/2 h-48 md:h-auto bg-cover bg-center" data-alt="A macro close-up of shiny chrome mechanical gear parts interacting smoothly. High-end industrial photography with a selective focus, creating a premium professional feel in tones of steel and metallic silver." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5FCJn5mJKIeGCF2_FDFoayG3wFck_fgkA5B5YJxb8qguN_8U_waR-g6bhgleVHzbF-cgL_qVxJwJpPkJtOmeiFO_5ZPyFqdJGVlY9RhxxdbVkxigm10kYkATgHSKtpKg-KW6A8znOPq9_G4CrnICecOQjCVE9HTldIOOlKrD7NHHQUgE1V5TyMoiap4bFx5fZa7XyHQqu6zUwmp_SRXm7YOenw6rdl6U_dEAPvyqBaGDtrMTC1BYM4A')"></div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center bg-surface">
+<button class="absolute top-2 right-2 text-primary hover:text-secondary" id="close-modal">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<span class="text-secondary font-label-md uppercase mb-2">ХУШ ОМАДЕД</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">10% ТАХФИФ</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Барои аввалин фармоиши худ тахфиф гиред! Рамзи промо: <strong>FIRST10</strong></p>
+<button class="bg-primary text-white w-full py-3 font-label-md uppercase tracking-widest hover:bg-secondary transition-colors active:scale-95" data-action="close-promo">ГИРИФТАНИ ТАҲФИФ</button>
+</div>
+</div>
+</div>
+<!-- Cart Drawer -->
+<div class="fixed inset-0 z-[120] pointer-events-none" id="cart-drawer">
+<div class="absolute inset-0 bg-black/50 opacity-0 transition-opacity" id="cart-overlay"></div>
+<aside class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl translate-x-full transition-transform duration-300 flex flex-col" id="cart-panel">
+<div class="flex items-center justify-between border-b border-outline-variant p-6">
+<div>
+<p class="text-label-sm uppercase tracking-widest text-secondary">Корзина</p>
+<h3 class="font-headline-md text-primary">Маҳсулоти интихобшуда</h3>
+</div>
+<button class="text-primary hover:text-secondary" id="close-cart">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-6" id="cart-items"></div>
+<div class="border-t border-outline-variant p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="text-on-surface-variant">Ҳамагӣ</span>
+<strong class="text-primary" id="cart-total">0 TJS</strong>
+</div>
+<button class="w-full bg-secondary text-white py-3 font-label-md uppercase tracking-wider hover:bg-secondary-container transition-colors">ТАСДИҚ КУНАН</button>
+</div>
+</aside>
+</div>
+<!-- Floating Action Button (Suppressed on Details, usually for Search or Support) -->
+<button id="support-fab" class="fixed right-6 bottom-24 md:bottom-10 z-40 bg-secondary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</button>
+<script src="5.js"></script>
+</body></html>
